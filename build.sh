@@ -10,20 +10,20 @@ clear
                                                       
 export TZ=Asia/Jakarta                                
                                                       
-crave clone destroy -y /crave-devspaces/vos           
+#crave clone destroy -y /crave-devspaces/vos           
                                                       
-crave clone create --projectID 35 /crave-devspaces/vos
+#crave clone create --projectID 35 /crave-devspaces/vos
                                                       
-cd /crave-devspaces/vos                               
+#cd /crave-devspaces/vos                               
                                                       
-echo -e "$cyan***************************************>
-echo -e "       BUILDING ROM with Bomb ass command   >
-echo -e "********************************************>
+#echo -e "$cyan***************************************>
+#echo -e "       BUILDING ROM with Bomb ass command   >
+#echo -e "********************************************>
                                                       
-crave run --no-patch -- "rm -rf .repo/local_manifests>
+rm -rf .repo/local_manifests>
 repo init -u https://github.com/VoltageOS/manifest.gi>
 git clone --depth=1 https://github.com/Tiktodz/local_>
-/opt/crave/resync.sh; \                               
-. build/envsetup.sh; \                                
-export TZ=Asia/Jakarta; \                             
-brunch X00TD"
+/opt/crave/resync.sh; \
+. build/envsetup.sh; \
+export TZ=Asia/Jakarta; \
+brunch X00TD
