@@ -16,14 +16,14 @@ crave clone create --projectID 35 /crave-devspaces/vos
 
 cd /crave-devspaces/vos
 
-#echo -e "$cyan***************************************"
-#echo -e "       BUILDING ROM with Bomb ass command   "
-#echo -e "********************************************"
+echo -e "$cyan***************************************"
+echo -e "       BUILDING ROM with Bomb ass command   "
+echo -e "********************************************"
 
-crave run --no-patch -- "rm -rf .repo/local_manifests; \
+rm -rf .repo/local_manifests; \
 repo init -u https://github.com/VoltageOS/manifest.git -b 16.2 --git-lfs; \
-git clone --depth=1 https://github.com/Tiktodz/local_manifesf -b vos .repo/local_manifests; \
+git clone --depth=1 https://github.com/Tiktodz/local_manifest -b vos .repo/local_manifests; \
 /opt/crave/resync.sh; \
 . build/envsetup.sh; \
 export TZ=Asia/Jakarta; \
-brunch X00TD"
+brunch X00TD
