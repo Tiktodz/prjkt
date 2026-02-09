@@ -27,7 +27,7 @@ git clone --depth=1 https://github.com/Tiktodz/local_manifest -b los .repo/local
 . build/envsetup.sh
 rm -rf vendor/lineage-priv/keys
 mkdir -p vendor/lineage-priv/keys
-cp lineage/scripts/lineage-priv-template/* vendor/lineage-priv/keys/
+cp -R lineage/scripts/lineage-priv-template/* vendor/lineage-priv/keys/
 cd vendor/lineage-priv/keys
 ./keys.sh
 cd -
