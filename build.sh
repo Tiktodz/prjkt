@@ -20,7 +20,7 @@ echo -e "$cyan***************************************"
 echo -e "       BUILDING ROM with Bomb ass command   "
 echo -e "********************************************"
 
-rm -rf .repo/local_manifests
+rm -rf .repo/local_manifests out/soong out/host/linux-x86
 repo init -u https://github.com/LineageOS/android.git -b lineage-23.2 --git-lfs
 git clone --depth=1 https://github.com/Tiktodz/local_manifest -b los .repo/local_manifests
 /opt/crave/resync.sh
