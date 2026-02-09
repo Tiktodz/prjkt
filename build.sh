@@ -10,19 +10,19 @@ clear
 
 export TZ=Asia/Jakarta
 
-crave clone destroy -y /crave-devspaces/vos
+#crave clone destroy -y /crave-devspaces/vos
 
-crave clone create --projectID 35 /crave-devspaces/vos
+#crave clone create --projectID 35 /crave-devspaces/los
 
-cd /crave-devspaces/vos
+#cd /crave-devspaces/los
 
 echo -e "$cyan***************************************"
 echo -e "       BUILDING ROM with Bomb ass command   "
 echo -e "********************************************"
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/VoltageOS/manifest.git -b 16.2 --git-lfs; \
-git clone --depth=1 https://github.com/Tiktodz/local_manifest -b vos .repo/local_manifests; \
+repo init -u https://github.com/LineageOS/android.git -b lineage-23.2 --git-lfs; \
+git clone --depth=1 https://github.com/Tiktodz/local_manifest -b los .repo/local_manifests; \
 /opt/crave/resync.sh; \
 . build/envsetup.sh; \
 export TZ=Asia/Jakarta; \
